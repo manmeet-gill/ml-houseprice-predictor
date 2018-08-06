@@ -3,10 +3,14 @@ using advance regression techniques
 
 Predict sales prices and practice feature engineering, RFs, and gradient boosting
 
+update: 8/6/2018 12:00pm
+
+added data split in the input data. training data is seperated from validation data. This improves the model. MAE is about 33000
 
 update: 8/6/2018 11:00am
+
 added Mean Absolute Error in the project to test the accuracy of the project.
-But In-Sample data is being used for validation
+But In-Sample data is being used for validation. MAE is about 66
 
 
 
