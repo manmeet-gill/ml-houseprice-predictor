@@ -3,6 +3,11 @@ using advance regression techniques
 
 Predict sales prices and practice feature engineering, RFs, and gradient boosting
 
+update: 8/6/2018 3:30 pm 
+
+increased efficiency by using Random Forest Regressor instead of DecisionTreeRegressor.
+it decreased MAE.
+
 update: 8/6/2018 2:40 pm 
 
 made a function to make a model with different leaves of a tree. so for every number of nodes, a different MAE value is found.
