@@ -4,6 +4,15 @@ using advance regression techniques
 Predict sales prices and practice feature engineering, RFs, and gradient boosting
 
 
+update: 8/6/2018 11:00am
+added Mean Absolute Error in the project to test the accuracy of the project.
+But In-Sample data is being used for validation
+
+
+
+
+
+
 File descriptions
 
 train.csv - the training set
