@@ -3,6 +3,11 @@ using advance regression techniques
 
 Predict sales prices and practice feature engineering, RFs, and gradient boosting
 
+update: 8/6/2018 2:40 pm 
+
+made a function to make a model with different leaves of a tree. so for every number of nodes, a different MAE value is found.
+So, we take the minimum value to find the best model with given data to avoid overfitting and underfitting. 
+
 update: 8/6/2018 12:00pm
 
 added data split in the input data. training data is seperated from validation data. This improves the model. MAE is about 33000

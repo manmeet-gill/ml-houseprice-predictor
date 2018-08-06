@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
 
 main_file_path = './train.csv' # this is the path to the Iowa data that you will use
 data = pd.read_csv(main_file_path)
@@ -23,7 +24,19 @@ print(X.head())
 print("The predictions are")
 print(iowa_model.predict(X.head()))
 
-from sklearn.metrics import mean_absolute_error
-
 predicted_prices = iowa_model.predict(val_X)
 print("MAE is ",mean_absolute_error(val_y, predicted_prices))
+
+def get_mae(max_leaf_nodes, predictors_train, predictors_val, targ_train, targ_val):
+    model = DecisionTreeRegressor(max_leaf_nodes=max_leaf_nodes, random_state=0)
+    model.fit(predictors_train, targ_train)
+    preds_val =model.predict(predictors_val)
+    mae = mean_absolute_error(targ_val, preds_val)
+    return(mae)
+list_errors=[]
+for max_leaf_nodes in range(2, 100):
+    my_mae =get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
+    list_errors.append([my_mae,max_leaf_nodes])
+    print("Max leaf nodes: %d  \t\t Mean Absolute Error: %d" %(max_leaf_nodes, my_mae))
+
+print(min(list_errors))
